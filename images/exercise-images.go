@@ -21,7 +21,7 @@ func (i Image) ColorModel() color.Model {
 }
 
 func (i Image) At(x, y int) color.Color {
-	return color.RGBA{i.color + uint8(x), i.color + uint8(y), 255, 255}
+	return color.RGBA{i.color + uint8(x), i.color + uint8(y), i.color + uint8(x+y), 255}
 }
 
 func main() {
